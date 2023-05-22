@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "herocoin_backend": {
+      "main": "src/herocoin_backend/main.mo",
+      "type": "motoko"
+    },
+    "herocoin_frontend": {
+      "dependencies": [
+        "herocoin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/herocoin_frontend/src/index.html"
+      },
+      "source": [
+        "src/herocoin_frontend/assets",
+        "dist/herocoin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
